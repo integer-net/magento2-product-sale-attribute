@@ -14,7 +14,7 @@ Create an "is_sale" product attribute and update it automatically from the price
 
 1. Install it into your Magento 2 project with composer:
     ```
-    composer require integer-net/magento2-product-is-sale-attribute
+    composer require integer-net/magento2-product-sale-attribute
     ```
 
 2. Enable module
@@ -30,7 +30,7 @@ You can disable auto generation in `Store -> Configuration -> Catalog -> Product
 
 A sale product attribute "Is Sale" (`is_sale`) will be created upon installation of this module.
 A cronjob is running every night at 00:01 and regenerates the value of this attribute for each 
-product, depending on the content of the price attributes (`price` and `special_price`) .
+product, depending on the content of the price attributes (`price` and `special_price`) and catelog price rules.
 
 ## Changelog
 
