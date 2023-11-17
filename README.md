@@ -57,6 +57,6 @@ The MIT License (MIT). Please see [License File](LICENSE) for more information.
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-compatibility]: https://img.shields.io/badge/magento-2.3%20|%202.4-brightgreen.svg?logo=magento&longCache=true&style=flat-square
 
-[link-packagist]: https://packagist.org/packages/integer-net/magento2-product-is-sale-attribute
+[link-packagist]: https://packagist.org/packages/integer-net/magento2-product-sale-attribute
 [link-author]: https://github.com/avstudnitz
 [link-contributors]: ../../contributors
