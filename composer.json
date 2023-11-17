@@ -1,0 +1,48 @@
+{
+    "name": "integer-net/magento2-product-sale-attribute",
+    "description": "Create an \"is_sale\" product attribute and update it automatically from the \"price\" and \"special_price\" attributes",
+    "type": "magento2-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andreas von Studnitz",
+            "email": "avs@integer-net.de"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "IntegerNet\\ProductSaleAttribute\\": "src"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "require": {
+        "php": "~7.4||~8.1",
+        "magento/framework": "^103.0.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "phpunit/phpunit": "^6.0|^9.0",
+        "pds/skeleton": "^1.0",
+        "phpro/grumphp": "^v0.21.0",
+        "phpstan/phpstan": "^0.12.0",
+        "squizlabs/php_codesniffer": "^3.5",
+        "magento/magento-coding-standard": "@dev"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "vendor/bin/phpcs --config-set installed_paths ../../magento/magento-coding-standard/"
+        ],
+        "post-update-cmd": [
+            "vendor/bin/phpcs --config-set installed_paths ../../magento/magento-coding-standard/"
+        ]
+    }
+}
