@@ -8,7 +8,6 @@ use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Catalog\Model\ResourceModel\Product as ProductResource;
 use Magento\Catalog\Model\ResourceModel\Product\Collection as ProductCollection;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
-use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
 use Magento\Store\Api\Data\StoreInterface;
 use Magento\Store\Model\StoreManagerInterface;
 
@@ -69,7 +68,7 @@ class ProductsUpdateService
 
     private function isProductSale(ProductInterface $product): bool
     {
-        $finalPrice = (float)$product->getFinalPrice();
+        $finalPrice = (float)$product->getData('final_price');
         $originalPrice = (float)$product->getPrice();
         if (!$finalPrice || !$originalPrice) {
             return false;
